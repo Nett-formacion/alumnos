@@ -11,7 +11,8 @@ class MainController extends Controller
         $numero = rand(1,10);
         $nombre = "Manuel";
 //        return view("main",compact('numero','nombre'));
-        return view("home",["numero"=>$numero,"nombre"=>$nombre]);
+        return view("home");
+        // resources/view/home.blade.php
     }
 
 

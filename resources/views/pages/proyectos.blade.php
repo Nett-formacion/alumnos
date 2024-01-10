@@ -1,4 +1,5 @@
-@extends("components.layout")
-@section("contenido")
-    <h1>Proyectos</h1>
-@endsection
+<x-layout.layout>
+    @slot("slot_main")
+        <h1>Estoy en Proyectos</h1>
+    @endslot
+</x-layout.layout>

@@ -1,4 +1,7 @@
-<x-layout>
+
+
+<x-layout.layout titulo="Home" meta-descriptio="página para aprender a desarrolla en laravel" >
+
     @slot("slot_nav")
         <a class="btn btn-primary" href="about">Principal!!</a>
     @endslot
@@ -16,5 +19,5 @@
             </div>
         </div>
     @endslot
-</x-layout>
+</x-layout.layout>
 

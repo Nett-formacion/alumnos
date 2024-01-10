@@ -14,9 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+
+Route::view("react","react" );
+Route::view("modal","modal" );
+Route::view("dashboard","dashboard" )->name("dashboard");
+
+Route::get("/",[\App\Http\Controllers\MainController::class,"index"])
+    ->name("home");
+
+
+Route::view("about","pages.about")->name("about");
+Route::view("contacts","pages.contact")->name("contact");
+Route::view("students","pages.alumnos")->name("students");
+Route::view("projects","pages.proyectos")->name("projects")
+    ->middleware("auth");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
